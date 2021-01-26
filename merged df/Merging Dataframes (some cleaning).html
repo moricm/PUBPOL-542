@@ -15195,8 +15195,8 @@ Gender       711
 LowIncome    599
 sped         584
 All          474
-ELL          456
 Homeless     456
+ELL          456
 Migrant      371
 504          333
 Foster       234
@@ -15482,7 +15482,7 @@ Name: StudentGroupType, dtype: int64</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#merging</span>
-<span class="n">df1</span><span class="o">=</span><span class="n">enn</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">grad</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> 
+<span class="n">df1</span><span class="o">=</span><span class="n">enn</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">grad</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">)</span> 
 </pre></div>
 
      </div>
@@ -15531,58 +15531,58 @@ Name: StudentGroupType, dtype: int64</pre>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Int64Index: 474 entries, 0 to 473
+Int64Index: 429 entries, 0 to 428
 Data columns (total 46 columns):
  #   Column                                   Non-Null Count  Dtype  
 ---  ------                                   --------------  -----  
  0   County                                   429 non-null    object 
  1   DistrictCode                             429 non-null    float64
  2   DistrictName                             429 non-null    object 
- 3   SchoolCode                               474 non-null    float64
+ 3   SchoolCode                               429 non-null    float64
  4   SchoolName_x                             429 non-null    object 
  5   CurrentSchoolType                        429 non-null    object 
  6   GradeLevel                               429 non-null    object 
- 7   All Students                             429 non-null    float64
- 8   Female                                   429 non-null    float64
- 9   Gender X                                 429 non-null    float64
- 10  Male                                     429 non-null    float64
- 11  American Indian/ Alaskan Native          429 non-null    float64
- 12  Asian                                    429 non-null    float64
- 13  Black/ African American                  429 non-null    float64
- 14  Hispanic/ Latino of any race(s)          429 non-null    float64
- 15  Native Hawaiian/ Other Pacific Islander  429 non-null    float64
- 16  Two or More Races                        429 non-null    float64
- 17  White                                    429 non-null    float64
- 18  English Language Learners                429 non-null    float64
- 19  Foster Care                              429 non-null    float64
- 20  Highly Capable                           429 non-null    float64
- 21  Homeless                                 429 non-null    float64
- 22  Low-Income                               429 non-null    float64
- 23  Migrant                                  429 non-null    float64
- 24  Military Parent                          429 non-null    float64
- 25  Mobile                                   429 non-null    float64
- 26  Section 504                              429 non-null    float64
- 27  Students with Disabilities               429 non-null    float64
- 28  Non-English Language Learners            429 non-null    float64
- 29  Non-Foster Care                          429 non-null    float64
- 30  Non-Highly Capable                       429 non-null    float64
- 31  Non-Homeless                             429 non-null    float64
- 32  Non-Low Income                           429 non-null    float64
- 33  Non Migrant                              429 non-null    float64
- 34  BegginingGrade9                          464 non-null    float64
- 35  TransferIn                               433 non-null    float64
- 36  Year1Dropout                             148 non-null    float64
- 37  Year2Dropout                             273 non-null    float64
- 38  Year3Dropout                             348 non-null    float64
+ 7   All Students                             429 non-null    int64  
+ 8   Female                                   429 non-null    int64  
+ 9   Gender X                                 429 non-null    int64  
+ 10  Male                                     429 non-null    int64  
+ 11  American Indian/ Alaskan Native          429 non-null    int64  
+ 12  Asian                                    429 non-null    int64  
+ 13  Black/ African American                  429 non-null    int64  
+ 14  Hispanic/ Latino of any race(s)          429 non-null    int64  
+ 15  Native Hawaiian/ Other Pacific Islander  429 non-null    int64  
+ 16  Two or More Races                        429 non-null    int64  
+ 17  White                                    429 non-null    int64  
+ 18  English Language Learners                429 non-null    int64  
+ 19  Foster Care                              429 non-null    int64  
+ 20  Highly Capable                           429 non-null    int64  
+ 21  Homeless                                 429 non-null    int64  
+ 22  Low-Income                               429 non-null    int64  
+ 23  Migrant                                  429 non-null    int64  
+ 24  Military Parent                          429 non-null    int64  
+ 25  Mobile                                   429 non-null    int64  
+ 26  Section 504                              429 non-null    int64  
+ 27  Students with Disabilities               429 non-null    int64  
+ 28  Non-English Language Learners            429 non-null    int64  
+ 29  Non-Foster Care                          429 non-null    int64  
+ 30  Non-Highly Capable                       429 non-null    int64  
+ 31  Non-Homeless                             429 non-null    int64  
+ 32  Non-Low Income                           429 non-null    int64  
+ 33  Non Migrant                              429 non-null    int64  
+ 34  BegginingGrade9                          428 non-null    float64
+ 35  TransferIn                               413 non-null    float64
+ 36  Year1Dropout                             147 non-null    float64
+ 37  Year2Dropout                             271 non-null    float64
+ 38  Year3Dropout                             346 non-null    float64
  39  Year4Dropout                             396 non-null    float64
- 40  TransferOut                              474 non-null    float64
- 41  FinalCohort                              474 non-null    float64
- 42  Graduate                                 474 non-null    float64
- 43  Continuing                               474 non-null    float64
- 44  Dropout                                  474 non-null    float64
- 45  GraduationRate                           422 non-null    float64
-dtypes: float64(41), object(5)
-memory usage: 174.0+ KB
+ 40  TransferOut                              429 non-null    float64
+ 41  FinalCohort                              429 non-null    float64
+ 42  Graduate                                 429 non-null    float64
+ 43  Continuing                               429 non-null    float64
+ 44  Dropout                                  429 non-null    float64
+ 45  GraduationRate                           420 non-null    float64
+dtypes: float64(14), int64(27), object(5)
+memory usage: 157.5+ KB
 </pre>
 </div>
 </div>
@@ -16029,7 +16029,7 @@ memory usage: 60.1+ KB
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(474, 46)</pre>
+<pre>(429, 46)</pre>
 </div>
 
 </div>
@@ -16116,9 +16116,9 @@ memory usage: 60.1+ KB
       <td>Harbor High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>51.0</td>
-      <td>29.0</td>
-      <td>0.0</td>
+      <td>51</td>
+      <td>29</td>
+      <td>0</td>
       <td>...</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -16140,9 +16140,9 @@ memory usage: 60.1+ KB
       <td>J M Weatherwax High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>222.0</td>
-      <td>96.0</td>
-      <td>0.0</td>
+      <td>222</td>
+      <td>96</td>
+      <td>0</td>
       <td>...</td>
       <td>3.0</td>
       <td>2.0</td>
@@ -16164,9 +16164,9 @@ memory usage: 60.1+ KB
       <td>Anacortes High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>175.0</td>
-      <td>84.0</td>
-      <td>0.0</td>
+      <td>175</td>
+      <td>84</td>
+      <td>0</td>
       <td>...</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -16188,9 +16188,9 @@ memory usage: 60.1+ KB
       <td>Cap Sante High School</td>
       <td>A</td>
       <td>12th Grade</td>
-      <td>43.0</td>
-      <td>17.0</td>
-      <td>0.0</td>
+      <td>43</td>
+      <td>17</td>
+      <td>0</td>
       <td>...</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -16212,9 +16212,9 @@ memory usage: 60.1+ KB
       <td>Arlington High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>415.0</td>
-      <td>187.0</td>
-      <td>0.0</td>
+      <td>415</td>
+      <td>187</td>
+      <td>0</td>
       <td>...</td>
       <td>1.0</td>
       <td>NaN</td>
@@ -16252,31 +16252,55 @@ memory usage: 60.1+ KB
       <td>...</td>
     </tr>
     <tr>
-      <th>469</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5052.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>424</th>
+      <td>Yakima</td>
+      <td>39007.0</td>
+      <td>Yakima School District</td>
+      <td>4093.0</td>
+      <td>Stanton Academy</td>
+      <td>A</td>
+      <td>12th Grade</td>
+      <td>122</td>
+      <td>67</td>
+      <td>0</td>
       <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>14.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>NaN</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>13.0</td>
+      <td>27.0</td>
+      <td>9.0</td>
+      <td>89.0</td>
+      <td>13.0</td>
+      <td>27.0</td>
+      <td>49.0</td>
+      <td>0.1461</td>
     </tr>
     <tr>
-      <th>470</th>
+      <th>425</th>
+      <td>Yakima</td>
+      <td>39007.0</td>
+      <td>Yakima School District</td>
+      <td>5153.0</td>
+      <td>Yakima Online</td>
+      <td>A</td>
+      <td>12th Grade</td>
+      <td>33</td>
+      <td>23</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>23.0</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>6.0</td>
+      <td>0.3478</td>
+    </tr>
+    <tr>
+      <th>426</th>
       <td>Thurston</td>
       <td>34002.0</td>
       <td>Yelm School District</td>
@@ -16284,9 +16308,9 @@ memory usage: 60.1+ KB
       <td>Yelm Extension School</td>
       <td>A</td>
       <td>12th Grade</td>
-      <td>86.0</td>
-      <td>48.0</td>
-      <td>0.0</td>
+      <td>86</td>
+      <td>48</td>
+      <td>0</td>
       <td>...</td>
       <td>NaN</td>
       <td>3.0</td>
@@ -16300,7 +16324,7 @@ memory usage: 60.1+ KB
       <td>0.2931</td>
     </tr>
     <tr>
-      <th>471</th>
+      <th>427</th>
       <td>Thurston</td>
       <td>34002.0</td>
       <td>Yelm School District</td>
@@ -16308,9 +16332,9 @@ memory usage: 60.1+ KB
       <td>Yelm High School 12</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>380.0</td>
-      <td>197.0</td>
-      <td>0.0</td>
+      <td>380</td>
+      <td>197</td>
+      <td>0</td>
       <td>...</td>
       <td>NaN</td>
       <td>2.0</td>
@@ -16324,31 +16348,7 @@ memory usage: 60.1+ KB
       <td>0.9215</td>
     </tr>
     <tr>
-      <th>472</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2481.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>13.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>473</th>
+      <th>428</th>
       <td>Yakima</td>
       <td>39205.0</td>
       <td>Zillah School District</td>
@@ -16356,9 +16356,9 @@ memory usage: 60.1+ KB
       <td>Zillah High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>112.0</td>
-      <td>50.0</td>
-      <td>0.0</td>
+      <td>112</td>
+      <td>50</td>
+      <td>0</td>
       <td>...</td>
       <td>2.0</td>
       <td>2.0</td>
@@ -16373,7 +16373,7 @@ memory usage: 60.1+ KB
     </tr>
   </tbody>
 </table>
-<p>474 rows × 46 columns</p>
+<p>429 rows × 46 columns</p>
 </div>
 </div>
 
@@ -16390,7 +16390,7 @@ memory usage: 60.1+ KB
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#merging</span>
-<span class="n">df2</span><span class="o">=</span><span class="n">df1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">res2</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span> 
+<span class="n">df2</span><span class="o">=</span><span class="n">df1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">res2</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">)</span> 
 </pre></div>
 
      </div>
@@ -16426,7 +16426,7 @@ memory usage: 60.1+ KB
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(474, 49)</pre>
+<pre>(429, 49)</pre>
 </div>
 
 </div>
@@ -16462,61 +16462,61 @@ memory usage: 60.1+ KB
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Int64Index: 474 entries, 0 to 473
+Int64Index: 429 entries, 0 to 428
 Data columns (total 49 columns):
  #   Column                                   Non-Null Count  Dtype  
 ---  ------                                   --------------  -----  
  0   County                                   429 non-null    object 
  1   DistrictCode                             429 non-null    float64
  2   DistrictName                             429 non-null    object 
- 3   SchoolCode                               474 non-null    float64
+ 3   SchoolCode                               429 non-null    float64
  4   SchoolName_x                             429 non-null    object 
  5   CurrentSchoolType                        429 non-null    object 
  6   GradeLevel                               429 non-null    object 
- 7   All Students                             429 non-null    float64
- 8   Female                                   429 non-null    float64
- 9   Gender X                                 429 non-null    float64
- 10  Male                                     429 non-null    float64
- 11  American Indian/ Alaskan Native          429 non-null    float64
- 12  Asian                                    429 non-null    float64
- 13  Black/ African American                  429 non-null    float64
- 14  Hispanic/ Latino of any race(s)          429 non-null    float64
- 15  Native Hawaiian/ Other Pacific Islander  429 non-null    float64
- 16  Two or More Races                        429 non-null    float64
- 17  White                                    429 non-null    float64
- 18  English Language Learners                429 non-null    float64
- 19  Foster Care                              429 non-null    float64
- 20  Highly Capable                           429 non-null    float64
- 21  Homeless                                 429 non-null    float64
- 22  Low-Income                               429 non-null    float64
- 23  Migrant                                  429 non-null    float64
- 24  Military Parent                          429 non-null    float64
- 25  Mobile                                   429 non-null    float64
- 26  Section 504                              429 non-null    float64
- 27  Students with Disabilities               429 non-null    float64
- 28  Non-English Language Learners            429 non-null    float64
- 29  Non-Foster Care                          429 non-null    float64
- 30  Non-Highly Capable                       429 non-null    float64
- 31  Non-Homeless                             429 non-null    float64
- 32  Non-Low Income                           429 non-null    float64
- 33  Non Migrant                              429 non-null    float64
- 34  BegginingGrade9                          464 non-null    float64
- 35  TransferIn                               433 non-null    float64
- 36  Year1Dropout                             148 non-null    float64
- 37  Year2Dropout                             273 non-null    float64
- 38  Year3Dropout                             348 non-null    float64
+ 7   All Students                             429 non-null    int64  
+ 8   Female                                   429 non-null    int64  
+ 9   Gender X                                 429 non-null    int64  
+ 10  Male                                     429 non-null    int64  
+ 11  American Indian/ Alaskan Native          429 non-null    int64  
+ 12  Asian                                    429 non-null    int64  
+ 13  Black/ African American                  429 non-null    int64  
+ 14  Hispanic/ Latino of any race(s)          429 non-null    int64  
+ 15  Native Hawaiian/ Other Pacific Islander  429 non-null    int64  
+ 16  Two or More Races                        429 non-null    int64  
+ 17  White                                    429 non-null    int64  
+ 18  English Language Learners                429 non-null    int64  
+ 19  Foster Care                              429 non-null    int64  
+ 20  Highly Capable                           429 non-null    int64  
+ 21  Homeless                                 429 non-null    int64  
+ 22  Low-Income                               429 non-null    int64  
+ 23  Migrant                                  429 non-null    int64  
+ 24  Military Parent                          429 non-null    int64  
+ 25  Mobile                                   429 non-null    int64  
+ 26  Section 504                              429 non-null    int64  
+ 27  Students with Disabilities               429 non-null    int64  
+ 28  Non-English Language Learners            429 non-null    int64  
+ 29  Non-Foster Care                          429 non-null    int64  
+ 30  Non-Highly Capable                       429 non-null    int64  
+ 31  Non-Homeless                             429 non-null    int64  
+ 32  Non-Low Income                           429 non-null    int64  
+ 33  Non Migrant                              429 non-null    int64  
+ 34  BegginingGrade9                          428 non-null    float64
+ 35  TransferIn                               413 non-null    float64
+ 36  Year1Dropout                             147 non-null    float64
+ 37  Year2Dropout                             271 non-null    float64
+ 38  Year3Dropout                             346 non-null    float64
  39  Year4Dropout                             396 non-null    float64
- 40  TransferOut                              474 non-null    float64
- 41  FinalCohort                              474 non-null    float64
- 42  Graduate                                 474 non-null    float64
- 43  Continuing                               474 non-null    float64
- 44  Dropout                                  474 non-null    float64
- 45  GraduationRate                           422 non-null    float64
- 46  DisciplineDenominator                    430 non-null    object 
- 47  DisciplineNumerator                      430 non-null    object 
- 48  DisciplineRate                           430 non-null    object 
-dtypes: float64(41), object(8)
-memory usage: 185.2+ KB
+ 40  TransferOut                              429 non-null    float64
+ 41  FinalCohort                              429 non-null    float64
+ 42  Graduate                                 429 non-null    float64
+ 43  Continuing                               429 non-null    float64
+ 44  Dropout                                  429 non-null    float64
+ 45  GraduationRate                           420 non-null    float64
+ 46  DisciplineDenominator                    429 non-null    object 
+ 47  DisciplineNumerator                      429 non-null    object 
+ 48  DisciplineRate                           429 non-null    object 
+dtypes: float64(14), int64(27), object(8)
+memory usage: 167.6+ KB
 </pre>
 </div>
 </div>
@@ -16618,9 +16618,9 @@ memory usage: 185.2+ KB
       <td>Harbor High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>51.0</td>
-      <td>29.0</td>
-      <td>0.0</td>
+      <td>51</td>
+      <td>29</td>
+      <td>0</td>
       <td>...</td>
       <td>7.0</td>
       <td>1.0</td>
@@ -16642,9 +16642,9 @@ memory usage: 185.2+ KB
       <td>J M Weatherwax High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>222.0</td>
-      <td>96.0</td>
-      <td>0.0</td>
+      <td>222</td>
+      <td>96</td>
+      <td>0</td>
       <td>...</td>
       <td>3.0</td>
       <td>24.0</td>
@@ -16666,9 +16666,9 @@ memory usage: 185.2+ KB
       <td>Anacortes High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>175.0</td>
-      <td>84.0</td>
-      <td>0.0</td>
+      <td>175</td>
+      <td>84</td>
+      <td>0</td>
       <td>...</td>
       <td>2.0</td>
       <td>25.0</td>
@@ -16690,9 +16690,9 @@ memory usage: 185.2+ KB
       <td>Cap Sante High School</td>
       <td>A</td>
       <td>12th Grade</td>
-      <td>43.0</td>
-      <td>17.0</td>
-      <td>0.0</td>
+      <td>43</td>
+      <td>17</td>
+      <td>0</td>
       <td>...</td>
       <td>10.0</td>
       <td>7.0</td>
@@ -16714,9 +16714,9 @@ memory usage: 185.2+ KB
       <td>Arlington High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>415.0</td>
-      <td>187.0</td>
-      <td>0.0</td>
+      <td>415</td>
+      <td>187</td>
+      <td>0</td>
       <td>...</td>
       <td>12.0</td>
       <td>36.0</td>
@@ -16754,31 +16754,55 @@ memory usage: 185.2+ KB
       <td>...</td>
     </tr>
     <tr>
-      <th>469</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5052.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>424</th>
+      <td>Yakima</td>
+      <td>39007.0</td>
+      <td>Yakima School District</td>
+      <td>4093.0</td>
+      <td>Stanton Academy</td>
+      <td>A</td>
+      <td>12th Grade</td>
+      <td>122</td>
+      <td>67</td>
+      <td>0</td>
       <td>...</td>
-      <td>NaN</td>
-      <td>14.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>27.0</td>
+      <td>9.0</td>
+      <td>89.0</td>
+      <td>13.0</td>
+      <td>27.0</td>
+      <td>49.0</td>
+      <td>0.1461</td>
+      <td>151</td>
+      <td>13</td>
+      <td>8.60%</td>
     </tr>
     <tr>
-      <th>470</th>
+      <th>425</th>
+      <td>Yakima</td>
+      <td>39007.0</td>
+      <td>Yakima School District</td>
+      <td>5153.0</td>
+      <td>Yakima Online</td>
+      <td>A</td>
+      <td>12th Grade</td>
+      <td>33</td>
+      <td>23</td>
+      <td>0</td>
+      <td>...</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>23.0</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>6.0</td>
+      <td>0.3478</td>
+      <td>Count Suppressed</td>
+      <td>Count Suppressed</td>
+      <td>&lt;6%</td>
+    </tr>
+    <tr>
+      <th>426</th>
       <td>Thurston</td>
       <td>34002.0</td>
       <td>Yelm School District</td>
@@ -16786,9 +16810,9 @@ memory usage: 185.2+ KB
       <td>Yelm Extension School</td>
       <td>A</td>
       <td>12th Grade</td>
-      <td>86.0</td>
-      <td>48.0</td>
-      <td>0.0</td>
+      <td>86</td>
+      <td>48</td>
+      <td>0</td>
       <td>...</td>
       <td>18.0</td>
       <td>16.0</td>
@@ -16802,7 +16826,7 @@ memory usage: 185.2+ KB
       <td>&lt;2%</td>
     </tr>
     <tr>
-      <th>471</th>
+      <th>427</th>
       <td>Thurston</td>
       <td>34002.0</td>
       <td>Yelm School District</td>
@@ -16810,9 +16834,9 @@ memory usage: 185.2+ KB
       <td>Yelm High School 12</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>380.0</td>
-      <td>197.0</td>
-      <td>0.0</td>
+      <td>380</td>
+      <td>197</td>
+      <td>0</td>
       <td>...</td>
       <td>7.0</td>
       <td>52.0</td>
@@ -16826,31 +16850,7 @@ memory usage: 185.2+ KB
       <td>3.50%</td>
     </tr>
     <tr>
-      <th>472</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2481.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>13.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>473</th>
+      <th>428</th>
       <td>Yakima</td>
       <td>39205.0</td>
       <td>Zillah School District</td>
@@ -16858,9 +16858,9 @@ memory usage: 185.2+ KB
       <td>Zillah High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>112.0</td>
-      <td>50.0</td>
-      <td>0.0</td>
+      <td>112</td>
+      <td>50</td>
+      <td>0</td>
       <td>...</td>
       <td>3.0</td>
       <td>7.0</td>
@@ -16875,7 +16875,7 @@ memory usage: 185.2+ KB
     </tr>
   </tbody>
 </table>
-<p>474 rows × 49 columns</p>
+<p>429 rows × 49 columns</p>
 </div>
 </div>
 
@@ -16957,7 +16957,7 @@ memory usage: 185.2+ KB
     <tr>
       <th>count</th>
       <td>429.000000</td>
-      <td>474.000000</td>
+      <td>429.000000</td>
       <td>429.000000</td>
       <td>429.000000</td>
       <td>429.000000</td>
@@ -16967,21 +16967,21 @@ memory usage: 185.2+ KB
       <td>429.000000</td>
       <td>429.000000</td>
       <td>...</td>
-      <td>148.000000</td>
-      <td>273.000000</td>
-      <td>348.000000</td>
+      <td>147.000000</td>
+      <td>271.000000</td>
+      <td>346.000000</td>
       <td>396.000000</td>
-      <td>474.000000</td>
-      <td>474.000000</td>
-      <td>474.000000</td>
-      <td>474.000000</td>
-      <td>474.000000</td>
-      <td>422.000000</td>
+      <td>429.000000</td>
+      <td>429.000000</td>
+      <td>429.000000</td>
+      <td>429.000000</td>
+      <td>429.000000</td>
+      <td>420.000000</td>
     </tr>
     <tr>
       <th>mean</th>
       <td>22473.055944</td>
-      <td>3403.421941</td>
+      <td>3383.986014</td>
       <td>193.426573</td>
       <td>94.076923</td>
       <td>0.300699</td>
@@ -16991,21 +16991,21 @@ memory usage: 185.2+ KB
       <td>9.132867</td>
       <td>41.515152</td>
       <td>...</td>
-      <td>2.472973</td>
-      <td>3.087912</td>
-      <td>5.356322</td>
+      <td>2.476190</td>
+      <td>3.084871</td>
+      <td>5.352601</td>
       <td>10.949495</td>
-      <td>21.424051</td>
-      <td>165.432489</td>
-      <td>138.185654</td>
-      <td>11.616034</td>
-      <td>15.630802</td>
-      <td>0.735088</td>
+      <td>23.268065</td>
+      <td>182.727273</td>
+      <td>152.671329</td>
+      <td>12.834499</td>
+      <td>17.221445</td>
+      <td>0.737795</td>
     </tr>
     <tr>
       <th>std</th>
       <td>10536.059911</td>
-      <td>1193.508748</td>
+      <td>1187.734471</td>
       <td>173.788241</td>
       <td>86.004924</td>
       <td>5.265433</td>
@@ -17015,16 +17015,16 @@ memory usage: 185.2+ KB
       <td>17.082498</td>
       <td>60.799524</td>
       <td>...</td>
-      <td>2.848668</td>
-      <td>4.820258</td>
-      <td>7.203869</td>
+      <td>2.858137</td>
+      <td>4.837756</td>
+      <td>7.222947</td>
       <td>15.348029</td>
-      <td>25.883777</td>
-      <td>166.084038</td>
-      <td>151.507657</td>
-      <td>17.547888</td>
-      <td>24.332544</td>
-      <td>0.251166</td>
+      <td>26.509660</td>
+      <td>165.303891</td>
+      <td>152.159707</td>
+      <td>18.017466</td>
+      <td>25.041739</td>
+      <td>0.248657</td>
     </tr>
     <tr>
       <th>min</th>
@@ -17053,7 +17053,7 @@ memory usage: 185.2+ KB
     <tr>
       <th>25%</th>
       <td>17001.000000</td>
-      <td>2416.250000</td>
+      <td>2415.000000</td>
       <td>42.000000</td>
       <td>20.000000</td>
       <td>0.000000</td>
@@ -17067,17 +17067,17 @@ memory usage: 185.2+ KB
       <td>1.000000</td>
       <td>2.000000</td>
       <td>3.000000</td>
+      <td>5.000000</td>
+      <td>42.000000</td>
+      <td>18.000000</td>
       <td>3.000000</td>
-      <td>25.750000</td>
-      <td>12.250000</td>
-      <td>2.000000</td>
-      <td>3.000000</td>
-      <td>0.648375</td>
+      <td>5.000000</td>
+      <td>0.657525</td>
     </tr>
     <tr>
       <th>50%</th>
       <td>21401.000000</td>
-      <td>3274.000000</td>
+      <td>3241.000000</td>
       <td>125.000000</td>
       <td>61.000000</td>
       <td>0.000000</td>
@@ -17091,17 +17091,17 @@ memory usage: 185.2+ KB
       <td>2.000000</td>
       <td>3.000000</td>
       <td>7.000000</td>
-      <td>11.500000</td>
-      <td>94.000000</td>
-      <td>58.500000</td>
-      <td>7.500000</td>
-      <td>9.500000</td>
-      <td>0.849450</td>
+      <td>14.000000</td>
+      <td>114.000000</td>
+      <td>83.000000</td>
+      <td>8.000000</td>
+      <td>11.000000</td>
+      <td>0.850000</td>
     </tr>
     <tr>
       <th>75%</th>
       <td>31311.000000</td>
-      <td>4293.250000</td>
+      <td>4272.000000</td>
       <td>328.000000</td>
       <td>160.000000</td>
       <td>0.000000</td>
@@ -17115,12 +17115,12 @@ memory usage: 185.2+ KB
       <td>3.000000</td>
       <td>6.000000</td>
       <td>13.000000</td>
-      <td>31.500000</td>
-      <td>292.000000</td>
-      <td>262.250000</td>
-      <td>15.000000</td>
-      <td>20.000000</td>
-      <td>0.910300</td>
+      <td>35.000000</td>
+      <td>306.000000</td>
+      <td>276.000000</td>
+      <td>16.000000</td>
+      <td>22.000000</td>
+      <td>0.910500</td>
     </tr>
     <tr>
       <th>max</th>
@@ -17680,7 +17680,7 @@ memory usage: 63.2 KB
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#merge</span>
-<span class="n">df3</span><span class="o">=</span><span class="n">df2</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">fin2</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span> 
+<span class="n">df3</span><span class="o">=</span><span class="n">df2</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">fin2</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;SchoolCode&#39;</span><span class="p">)</span> 
 </pre></div>
 
      </div>
@@ -17715,63 +17715,63 @@ memory usage: 63.2 KB
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Int64Index: 474 entries, 0 to 473
+Int64Index: 423 entries, 0 to 422
 Data columns (total 51 columns):
  #   Column                                   Non-Null Count  Dtype  
 ---  ------                                   --------------  -----  
- 0   County                                   429 non-null    object 
- 1   DistrictCode_x                           429 non-null    float64
- 2   DistrictName                             429 non-null    object 
- 3   SchoolCode                               474 non-null    float64
- 4   SchoolName                               429 non-null    object 
- 5   CurrentSchoolType                        429 non-null    object 
- 6   GradeLevel                               429 non-null    object 
- 7   All Students                             429 non-null    float64
- 8   Female                                   429 non-null    float64
- 9   Gender X                                 429 non-null    float64
- 10  Male                                     429 non-null    float64
- 11  American Indian/ Alaskan Native          429 non-null    float64
- 12  Asian                                    429 non-null    float64
- 13  Black/ African American                  429 non-null    float64
- 14  Hispanic/ Latino of any race(s)          429 non-null    float64
- 15  Native Hawaiian/ Other Pacific Islander  429 non-null    float64
- 16  Two or More Races                        429 non-null    float64
- 17  White                                    429 non-null    float64
- 18  English Language Learners                429 non-null    float64
- 19  Foster Care                              429 non-null    float64
- 20  Highly Capable                           429 non-null    float64
- 21  Homeless                                 429 non-null    float64
- 22  Low-Income                               429 non-null    float64
- 23  Migrant                                  429 non-null    float64
- 24  Military Parent                          429 non-null    float64
- 25  Mobile                                   429 non-null    float64
- 26  Section 504                              429 non-null    float64
- 27  Students with Disabilities               429 non-null    float64
- 28  Non-English Language Learners            429 non-null    float64
- 29  Non-Foster Care                          429 non-null    float64
- 30  Non-Highly Capable                       429 non-null    float64
- 31  Non-Homeless                             429 non-null    float64
- 32  Non-Low Income                           429 non-null    float64
- 33  Non Migrant                              429 non-null    float64
- 34  BegginingGrade9                          464 non-null    float64
- 35  TransferIn                               433 non-null    float64
- 36  Year1Dropout                             148 non-null    float64
- 37  Year2Dropout                             273 non-null    float64
- 38  Year3Dropout                             348 non-null    float64
- 39  Year4Dropout                             396 non-null    float64
- 40  TransferOut                              474 non-null    float64
- 41  FinalCohort                              474 non-null    float64
- 42  Graduate                                 474 non-null    float64
- 43  Continuing                               474 non-null    float64
- 44  Dropout                                  474 non-null    float64
- 45  GraduationRate                           422 non-null    float64
- 46  DisciplineDenominator                    430 non-null    object 
- 47  DisciplineNumerator                      430 non-null    object 
- 48  DisciplineRate                           430 non-null    object 
- 49  DistrictCode_y                           455 non-null    float64
- 50  Expenditure                              455 non-null    float64
-dtypes: float64(43), object(8)
-memory usage: 192.6+ KB
+ 0   County                                   423 non-null    object 
+ 1   DistrictCode_x                           423 non-null    float64
+ 2   DistrictName                             423 non-null    object 
+ 3   SchoolCode                               423 non-null    float64
+ 4   SchoolName                               423 non-null    object 
+ 5   CurrentSchoolType                        423 non-null    object 
+ 6   GradeLevel                               423 non-null    object 
+ 7   All Students                             423 non-null    int64  
+ 8   Female                                   423 non-null    int64  
+ 9   Gender X                                 423 non-null    int64  
+ 10  Male                                     423 non-null    int64  
+ 11  American Indian/ Alaskan Native          423 non-null    int64  
+ 12  Asian                                    423 non-null    int64  
+ 13  Black/ African American                  423 non-null    int64  
+ 14  Hispanic/ Latino of any race(s)          423 non-null    int64  
+ 15  Native Hawaiian/ Other Pacific Islander  423 non-null    int64  
+ 16  Two or More Races                        423 non-null    int64  
+ 17  White                                    423 non-null    int64  
+ 18  English Language Learners                423 non-null    int64  
+ 19  Foster Care                              423 non-null    int64  
+ 20  Highly Capable                           423 non-null    int64  
+ 21  Homeless                                 423 non-null    int64  
+ 22  Low-Income                               423 non-null    int64  
+ 23  Migrant                                  423 non-null    int64  
+ 24  Military Parent                          423 non-null    int64  
+ 25  Mobile                                   423 non-null    int64  
+ 26  Section 504                              423 non-null    int64  
+ 27  Students with Disabilities               423 non-null    int64  
+ 28  Non-English Language Learners            423 non-null    int64  
+ 29  Non-Foster Care                          423 non-null    int64  
+ 30  Non-Highly Capable                       423 non-null    int64  
+ 31  Non-Homeless                             423 non-null    int64  
+ 32  Non-Low Income                           423 non-null    int64  
+ 33  Non Migrant                              423 non-null    int64  
+ 34  BegginingGrade9                          422 non-null    float64
+ 35  TransferIn                               407 non-null    float64
+ 36  Year1Dropout                             146 non-null    float64
+ 37  Year2Dropout                             269 non-null    float64
+ 38  Year3Dropout                             341 non-null    float64
+ 39  Year4Dropout                             392 non-null    float64
+ 40  TransferOut                              423 non-null    float64
+ 41  FinalCohort                              423 non-null    float64
+ 42  Graduate                                 423 non-null    float64
+ 43  Continuing                               423 non-null    float64
+ 44  Dropout                                  423 non-null    float64
+ 45  GraduationRate                           414 non-null    float64
+ 46  DisciplineDenominator                    423 non-null    object 
+ 47  DisciplineNumerator                      423 non-null    object 
+ 48  DisciplineRate                           423 non-null    object 
+ 49  DistrictCode_y                           423 non-null    int64  
+ 50  Expenditure                              423 non-null    float64
+dtypes: float64(15), int64(28), object(8)
+memory usage: 171.8+ KB
 </pre>
 </div>
 </div>
@@ -17903,9 +17903,9 @@ memory usage: 192.6+ KB
       <td>Harbor High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>51.0</td>
-      <td>29.0</td>
-      <td>0.0</td>
+      <td>51</td>
+      <td>29</td>
+      <td>0</td>
       <td>...</td>
       <td>1.0</td>
       <td>42.0</td>
@@ -17927,9 +17927,9 @@ memory usage: 192.6+ KB
       <td>J M Weatherwax High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>222.0</td>
-      <td>96.0</td>
-      <td>0.0</td>
+      <td>222</td>
+      <td>96</td>
+      <td>0</td>
       <td>...</td>
       <td>24.0</td>
       <td>196.0</td>
@@ -17951,9 +17951,9 @@ memory usage: 192.6+ KB
       <td>Anacortes High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>175.0</td>
-      <td>84.0</td>
-      <td>0.0</td>
+      <td>175</td>
+      <td>84</td>
+      <td>0</td>
       <td>...</td>
       <td>25.0</td>
       <td>168.0</td>
@@ -17975,9 +17975,9 @@ memory usage: 192.6+ KB
       <td>Cap Sante High School</td>
       <td>A</td>
       <td>12th Grade</td>
-      <td>43.0</td>
-      <td>17.0</td>
-      <td>0.0</td>
+      <td>43</td>
+      <td>17</td>
+      <td>0</td>
       <td>...</td>
       <td>7.0</td>
       <td>39.0</td>
@@ -17999,9 +17999,9 @@ memory usage: 192.6+ KB
       <td>Arlington High School</td>
       <td>P</td>
       <td>12th Grade</td>
-      <td>415.0</td>
-      <td>187.0</td>
-      <td>0.0</td>
+      <td>415</td>
+      <td>187</td>
+      <td>0</td>
       <td>...</td>
       <td>36.0</td>
       <td>389.0</td>
@@ -18053,62 +18053,62 @@ memory usage: 192.6+ KB
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Int64Index: 474 entries, 0 to 473
+Int64Index: 423 entries, 0 to 422
 Data columns (total 50 columns):
  #   Column                                   Non-Null Count  Dtype  
 ---  ------                                   --------------  -----  
- 0   County                                   429 non-null    object 
- 1   DistrictCode                             429 non-null    float64
- 2   DistrictName                             429 non-null    object 
- 3   SchoolCode                               474 non-null    float64
- 4   SchoolName                               429 non-null    object 
- 5   CurrentSchoolType                        429 non-null    object 
- 6   GradeLevel                               429 non-null    object 
- 7   All Students                             429 non-null    float64
- 8   Female                                   429 non-null    float64
- 9   Gender X                                 429 non-null    float64
- 10  Male                                     429 non-null    float64
- 11  American Indian/ Alaskan Native          429 non-null    float64
- 12  Asian                                    429 non-null    float64
- 13  Black/ African American                  429 non-null    float64
- 14  Hispanic/ Latino of any race(s)          429 non-null    float64
- 15  Native Hawaiian/ Other Pacific Islander  429 non-null    float64
- 16  Two or More Races                        429 non-null    float64
- 17  White                                    429 non-null    float64
- 18  English Language Learners                429 non-null    float64
- 19  Foster Care                              429 non-null    float64
- 20  Highly Capable                           429 non-null    float64
- 21  Homeless                                 429 non-null    float64
- 22  Low-Income                               429 non-null    float64
- 23  Migrant                                  429 non-null    float64
- 24  Military Parent                          429 non-null    float64
- 25  Mobile                                   429 non-null    float64
- 26  Section 504                              429 non-null    float64
- 27  Students with Disabilities               429 non-null    float64
- 28  Non-English Language Learners            429 non-null    float64
- 29  Non-Foster Care                          429 non-null    float64
- 30  Non-Highly Capable                       429 non-null    float64
- 31  Non-Homeless                             429 non-null    float64
- 32  Non-Low Income                           429 non-null    float64
- 33  Non Migrant                              429 non-null    float64
- 34  BegginingGrade9                          464 non-null    float64
- 35  TransferIn                               433 non-null    float64
- 36  Year1Dropout                             148 non-null    float64
- 37  Year2Dropout                             273 non-null    float64
- 38  Year3Dropout                             348 non-null    float64
- 39  Year4Dropout                             396 non-null    float64
- 40  TransferOut                              474 non-null    float64
- 41  FinalCohort                              474 non-null    float64
- 42  Graduate                                 474 non-null    float64
- 43  Continuing                               474 non-null    float64
- 44  Dropout                                  474 non-null    float64
- 45  GraduationRate                           422 non-null    float64
- 46  DisciplineDenominator                    430 non-null    object 
- 47  DisciplineNumerator                      430 non-null    object 
- 48  DisciplineRate                           430 non-null    object 
- 49  Expenditure                              455 non-null    float64
-dtypes: float64(42), object(8)
-memory usage: 188.9+ KB
+ 0   County                                   423 non-null    object 
+ 1   DistrictCode                             423 non-null    float64
+ 2   DistrictName                             423 non-null    object 
+ 3   SchoolCode                               423 non-null    float64
+ 4   SchoolName                               423 non-null    object 
+ 5   CurrentSchoolType                        423 non-null    object 
+ 6   GradeLevel                               423 non-null    object 
+ 7   All Students                             423 non-null    int64  
+ 8   Female                                   423 non-null    int64  
+ 9   Gender X                                 423 non-null    int64  
+ 10  Male                                     423 non-null    int64  
+ 11  American Indian/ Alaskan Native          423 non-null    int64  
+ 12  Asian                                    423 non-null    int64  
+ 13  Black/ African American                  423 non-null    int64  
+ 14  Hispanic/ Latino of any race(s)          423 non-null    int64  
+ 15  Native Hawaiian/ Other Pacific Islander  423 non-null    int64  
+ 16  Two or More Races                        423 non-null    int64  
+ 17  White                                    423 non-null    int64  
+ 18  English Language Learners                423 non-null    int64  
+ 19  Foster Care                              423 non-null    int64  
+ 20  Highly Capable                           423 non-null    int64  
+ 21  Homeless                                 423 non-null    int64  
+ 22  Low-Income                               423 non-null    int64  
+ 23  Migrant                                  423 non-null    int64  
+ 24  Military Parent                          423 non-null    int64  
+ 25  Mobile                                   423 non-null    int64  
+ 26  Section 504                              423 non-null    int64  
+ 27  Students with Disabilities               423 non-null    int64  
+ 28  Non-English Language Learners            423 non-null    int64  
+ 29  Non-Foster Care                          423 non-null    int64  
+ 30  Non-Highly Capable                       423 non-null    int64  
+ 31  Non-Homeless                             423 non-null    int64  
+ 32  Non-Low Income                           423 non-null    int64  
+ 33  Non Migrant                              423 non-null    int64  
+ 34  BegginingGrade9                          422 non-null    float64
+ 35  TransferIn                               407 non-null    float64
+ 36  Year1Dropout                             146 non-null    float64
+ 37  Year2Dropout                             269 non-null    float64
+ 38  Year3Dropout                             341 non-null    float64
+ 39  Year4Dropout                             392 non-null    float64
+ 40  TransferOut                              423 non-null    float64
+ 41  FinalCohort                              423 non-null    float64
+ 42  Graduate                                 423 non-null    float64
+ 43  Continuing                               423 non-null    float64
+ 44  Dropout                                  423 non-null    float64
+ 45  GraduationRate                           414 non-null    float64
+ 46  DisciplineDenominator                    423 non-null    object 
+ 47  DisciplineNumerator                      423 non-null    object 
+ 48  DisciplineRate                           423 non-null    object 
+ 49  Expenditure                              423 non-null    float64
+dtypes: float64(15), int64(27), object(8)
+memory usage: 168.5+ KB
 </pre>
 </div>
 </div>
@@ -18121,6 +18121,160 @@ memory usage: 188.9+ KB
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#see how many values &quot;counts compressed&quot; for discipline vairables</span>
+<span class="n">df3</span><span class="o">.</span><span class="n">DisciplineDenominator</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Count Suppressed    229
+382                   3
+357                   3
+236                   3
+354                   3
+                   ... 
+158                   1
+377                   1
+347                   1
+530                   1
+326                   1
+Name: DisciplineDenominator, Length: 159, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#get rid of variables</span>
+<span class="n">df3</span><span class="o">=</span><span class="n">df3</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;DisciplineDenominator&#39;</span><span class="p">,</span><span class="s1">&#39;DisciplineNumerator&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#see how many values in discipline rate objects</span>
+<span class="n">df3</span><span class="o">.</span><span class="n">DisciplineRate</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;10%      52
+&lt;1%       39
+&lt;3%       27
+&lt;2%       22
+&lt;5%       18
+          ..
+12.00%     1
+9.60%      1
+9.00%      1
+9.30%      1
+2.70%      1
+Name: DisciplineRate, Length: 94, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df3</span><span class="o">.</span><span class="n">DisciplineRate</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>count      423
+unique      94
+top       &lt;10%
+freq        52
+Name: DisciplineRate, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df3</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -18139,7 +18293,7 @@ memory usage: 188.9+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[56]:</div>
 
 
 
@@ -18188,75 +18342,75 @@ memory usage: 188.9+ KB
   <tbody>
     <tr>
       <th>count</th>
-      <td>429.000000</td>
-      <td>474.000000</td>
-      <td>429.000000</td>
-      <td>429.000000</td>
-      <td>429.000000</td>
-      <td>429.000000</td>
-      <td>429.000000</td>
-      <td>429.000000</td>
-      <td>429.000000</td>
-      <td>429.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
       <td>...</td>
-      <td>273.000000</td>
-      <td>348.000000</td>
-      <td>396.000000</td>
-      <td>474.000000</td>
-      <td>474.000000</td>
-      <td>474.000000</td>
-      <td>474.000000</td>
-      <td>474.000000</td>
-      <td>422.000000</td>
-      <td>4.550000e+02</td>
+      <td>269.000000</td>
+      <td>341.000000</td>
+      <td>392.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>423.000000</td>
+      <td>414.000000</td>
+      <td>4.230000e+02</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>22473.055944</td>
-      <td>3403.421941</td>
-      <td>193.426573</td>
-      <td>94.076923</td>
-      <td>0.300699</td>
-      <td>99.048951</td>
-      <td>2.428904</td>
-      <td>15.909091</td>
-      <td>9.132867</td>
-      <td>41.515152</td>
+      <td>22461.356974</td>
+      <td>3357.605201</td>
+      <td>194.297872</td>
+      <td>94.576832</td>
+      <td>0.304965</td>
+      <td>99.416076</td>
+      <td>2.439716</td>
+      <td>16.026005</td>
+      <td>9.170213</td>
+      <td>41.806147</td>
       <td>...</td>
-      <td>3.087912</td>
-      <td>5.356322</td>
-      <td>10.949495</td>
-      <td>21.424051</td>
-      <td>165.432489</td>
-      <td>138.185654</td>
-      <td>11.616034</td>
-      <td>15.630802</td>
-      <td>0.735088</td>
-      <td>1.001903e+07</td>
+      <td>3.100372</td>
+      <td>5.378299</td>
+      <td>10.887755</td>
+      <td>23.569740</td>
+      <td>184.342790</td>
+      <td>154.716312</td>
+      <td>12.371158</td>
+      <td>17.255319</td>
+      <td>0.743732</td>
+      <td>1.025679e+07</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>10536.059911</td>
-      <td>1193.508748</td>
-      <td>173.788241</td>
-      <td>86.004924</td>
-      <td>5.265433</td>
-      <td>88.832037</td>
-      <td>4.521775</td>
-      <td>30.554817</td>
-      <td>17.082498</td>
-      <td>60.799524</td>
+      <td>10552.431941</td>
+      <td>1173.517051</td>
+      <td>173.841054</td>
+      <td>86.067168</td>
+      <td>5.302610</td>
+      <td>88.811168</td>
+      <td>4.545247</td>
+      <td>30.714582</td>
+      <td>17.160639</td>
+      <td>61.115424</td>
       <td>...</td>
-      <td>4.820258</td>
-      <td>7.203869</td>
-      <td>15.348029</td>
-      <td>25.883777</td>
-      <td>166.084038</td>
-      <td>151.507657</td>
-      <td>17.547888</td>
-      <td>24.332544</td>
-      <td>0.251166</td>
-      <td>8.665315e+06</td>
+      <td>4.852407</td>
+      <td>7.265592</td>
+      <td>15.392650</td>
+      <td>26.573857</td>
+      <td>165.694441</td>
+      <td>152.255491</td>
+      <td>15.990572</td>
+      <td>25.181823</td>
+      <td>0.243729</td>
+      <td>8.829850e+06</td>
     </tr>
     <tr>
       <th>min</th>
@@ -18285,8 +18439,8 @@ memory usage: 188.9+ KB
     <tr>
       <th>25%</th>
       <td>17001.000000</td>
-      <td>2416.250000</td>
-      <td>42.000000</td>
+      <td>2398.500000</td>
+      <td>43.000000</td>
       <td>20.000000</td>
       <td>0.000000</td>
       <td>22.000000</td>
@@ -18298,22 +18452,22 @@ memory usage: 188.9+ KB
       <td>1.000000</td>
       <td>2.000000</td>
       <td>3.000000</td>
+      <td>5.000000</td>
+      <td>42.000000</td>
+      <td>19.500000</td>
       <td>3.000000</td>
-      <td>25.750000</td>
-      <td>12.250000</td>
-      <td>2.000000</td>
-      <td>3.000000</td>
-      <td>0.648375</td>
-      <td>2.558941e+06</td>
+      <td>5.000000</td>
+      <td>0.683525</td>
+      <td>2.630490e+06</td>
     </tr>
     <tr>
       <th>50%</th>
       <td>21401.000000</td>
-      <td>3274.000000</td>
-      <td>125.000000</td>
+      <td>3206.000000</td>
+      <td>127.000000</td>
       <td>61.000000</td>
       <td>0.000000</td>
-      <td>65.000000</td>
+      <td>66.000000</td>
       <td>1.000000</td>
       <td>2.000000</td>
       <td>2.000000</td>
@@ -18322,22 +18476,22 @@ memory usage: 188.9+ KB
       <td>2.000000</td>
       <td>3.000000</td>
       <td>7.000000</td>
-      <td>11.500000</td>
-      <td>94.000000</td>
-      <td>58.500000</td>
-      <td>7.500000</td>
-      <td>9.500000</td>
-      <td>0.849450</td>
-      <td>6.591065e+06</td>
+      <td>14.000000</td>
+      <td>120.000000</td>
+      <td>86.000000</td>
+      <td>8.000000</td>
+      <td>11.000000</td>
+      <td>0.853100</td>
+      <td>6.321022e+06</td>
     </tr>
     <tr>
       <th>75%</th>
-      <td>31311.000000</td>
-      <td>4293.250000</td>
-      <td>328.000000</td>
+      <td>31308.500000</td>
+      <td>4250.500000</td>
+      <td>328.500000</td>
       <td>160.000000</td>
       <td>0.000000</td>
-      <td>165.000000</td>
+      <td>165.500000</td>
       <td>3.000000</td>
       <td>18.000000</td>
       <td>10.000000</td>
@@ -18346,18 +18500,18 @@ memory usage: 188.9+ KB
       <td>3.000000</td>
       <td>6.000000</td>
       <td>13.000000</td>
-      <td>31.500000</td>
-      <td>292.000000</td>
-      <td>262.250000</td>
-      <td>15.000000</td>
-      <td>20.000000</td>
-      <td>0.910300</td>
-      <td>1.807375e+07</td>
+      <td>35.000000</td>
+      <td>308.500000</td>
+      <td>278.500000</td>
+      <td>16.000000</td>
+      <td>21.500000</td>
+      <td>0.911700</td>
+      <td>1.854898e+07</td>
     </tr>
     <tr>
       <th>max</th>
       <td>39209.000000</td>
-      <td>5953.000000</td>
+      <td>5549.000000</td>
       <td>843.000000</td>
       <td>497.000000</td>
       <td>109.000000</td>
@@ -18390,10 +18544,99 @@ memory usage: 188.9+ KB
 
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df3</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 423 entries, 0 to 422
+Data columns (total 48 columns):
+ #   Column                                   Non-Null Count  Dtype  
+---  ------                                   --------------  -----  
+ 0   County                                   423 non-null    object 
+ 1   DistrictCode                             423 non-null    float64
+ 2   DistrictName                             423 non-null    object 
+ 3   SchoolCode                               423 non-null    float64
+ 4   SchoolName                               423 non-null    object 
+ 5   CurrentSchoolType                        423 non-null    object 
+ 6   GradeLevel                               423 non-null    object 
+ 7   All Students                             423 non-null    int64  
+ 8   Female                                   423 non-null    int64  
+ 9   Gender X                                 423 non-null    int64  
+ 10  Male                                     423 non-null    int64  
+ 11  American Indian/ Alaskan Native          423 non-null    int64  
+ 12  Asian                                    423 non-null    int64  
+ 13  Black/ African American                  423 non-null    int64  
+ 14  Hispanic/ Latino of any race(s)          423 non-null    int64  
+ 15  Native Hawaiian/ Other Pacific Islander  423 non-null    int64  
+ 16  Two or More Races                        423 non-null    int64  
+ 17  White                                    423 non-null    int64  
+ 18  English Language Learners                423 non-null    int64  
+ 19  Foster Care                              423 non-null    int64  
+ 20  Highly Capable                           423 non-null    int64  
+ 21  Homeless                                 423 non-null    int64  
+ 22  Low-Income                               423 non-null    int64  
+ 23  Migrant                                  423 non-null    int64  
+ 24  Military Parent                          423 non-null    int64  
+ 25  Mobile                                   423 non-null    int64  
+ 26  Section 504                              423 non-null    int64  
+ 27  Students with Disabilities               423 non-null    int64  
+ 28  Non-English Language Learners            423 non-null    int64  
+ 29  Non-Foster Care                          423 non-null    int64  
+ 30  Non-Highly Capable                       423 non-null    int64  
+ 31  Non-Homeless                             423 non-null    int64  
+ 32  Non-Low Income                           423 non-null    int64  
+ 33  Non Migrant                              423 non-null    int64  
+ 34  BegginingGrade9                          422 non-null    float64
+ 35  TransferIn                               407 non-null    float64
+ 36  Year1Dropout                             146 non-null    float64
+ 37  Year2Dropout                             269 non-null    float64
+ 38  Year3Dropout                             341 non-null    float64
+ 39  Year4Dropout                             392 non-null    float64
+ 40  TransferOut                              423 non-null    float64
+ 41  FinalCohort                              423 non-null    float64
+ 42  Graduate                                 423 non-null    float64
+ 43  Continuing                               423 non-null    float64
+ 44  Dropout                                  423 non-null    float64
+ 45  GraduationRate                           414 non-null    float64
+ 46  DisciplineRate                           423 non-null    object 
+ 47  Expenditure                              423 non-null    float64
+dtypes: float64(15), int64(27), object(6)
+memory usage: 161.9+ KB
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#save dataframe</span>
