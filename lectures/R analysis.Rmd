@@ -1,0 +1,233 @@
+---
+title: "pubpol"
+author: "Micaela Moricet"
+date: "1/26/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+#loading data
+df=readRDS(gzcon(url("https://github.com/moricm/PUBPOL-542-GROUP/raw/main/final%20data/finaldata.RDS")))
+#if it was an excel file library(rio) 'df=import(link)'
+
+```
+
+```{r}
+str(df)
+```
+
+```{r}
+#names
+names(df)
+```
+
+```{r}
+#school with highest expenditure
+condition1=df$Expenditure==max(df$Expenditure)
+df[condition1,]
+```
+
+```{r}
+df[condition1,"SchoolName"]
+```
+
+```{r}
+#School with highest expenditure with high levels of discipline rates
+library(magrittr)
+library(dplyr)
+
+condition1=school_highdis$Expenditure==max(school_highdis$Expenditure)
+
+# from high discipline rates:
+dis=c("7_10","above_10")
+condition2=df$DisciplineInt %in% dis
+school_highdis=df[condition2,]
+
+school_highdis[condition1,"SchoolName"]
+
+```
+
+```{r}
+#school with highest expenditure of high disicpline rates
+df%>%
+    filter(DisciplineInt %in% dis)%>%
+    filter(Expenditure==max(Expenditure))%>%
+    select(SchoolName)
+```
+
+```{r}
+#Cluster Analysis/ Partitioning Technique
+
+#select the variables of interest
+dfClus=df[,c('Graduate','Expenditure','White')]
+summary(dfClus)
+
+#rescale the variables of interest
+
+dfClus=scale(dfClus)
+summary(dfClus)
+
+#Rename the subset indexes
+row.names(dfClus)=df$SchoolName
+head(dfClus)
+
+#set seed 
+set.seed(123)
+
+#decide distance method and compute distance matrix
+library(cluster)
+dfClus_D=cluster::daisy(x=dfClus)
+
+#Partinioning technique
+NumCluster=4
+res.pam = pam(x=dfClus_D,
+              k = NumCluster,
+              cluster.only = F)
+
+#add results to original data frame
+df$pam=as.factor(res.pam$clustering)
+
+#query data
+df[df$pam==1,'SchoolName']
+
+#table of clusters
+table(df$pam)
+
+#Evaluate results. Report average silhouettes
+library(factoextra)
+fviz_silhouette(res.pam)
+
+#save individual silhouettes
+pamEval=data.frame(res.pam$silinfo$widths)
+head(pamEval)
+
+#request negative silhouettes, the ones poorly clustered
+pamEval[pamEval$sil_width<0,]
+```
+```{r}
+#Clustering Analysis/ Hierarchizing :agglomerative
+
+#change rownames because some schools have the same names
+rownames(dfClus)<-c()
+
+#decide distance method and compute distance matrix
+dfClus_D=cluster::daisy(x=dfClus)
+
+#run analysis
+
+res.agnes= hcut(dfClus_D, 
+                k = NumCluster,isdiss=T,
+                hc_func='agnes',
+                hc_method = "ward.D2")
+#add results to original dataframe
+df$agn=as.factor(res.agnes$cluster)
+
+#table of clusters
+table(df$agn)
+
+#evaluate results
+fviz_dend(res.agnes,k=NumCluster, cex = 0.7, horiz = T)
+
+#report average silhouettes
+fviz_silhouette(res.agnes)
+
+#saving silhouettes
+agnEval=data.frame(res.agnes$silinfo$widths)
+head(agnEval)
+
+#request negative silhouettes
+poor<-agnEval[agnEval$sil_width<0,]
+
+#get school names of poorly clustered schools
+poor<-merge(poor, df, by.x = 0, by.y = 0) %>% 
+poor$SchoolName
+
+```
+
+
+```{r}
+#Create Binary Outcome
+
+df$High.Grad=ifelse(df$Graduate>median(df$Graduate,
+                                        na.rm = T),1,0)
+#reformat
+df$High.Grad=factor(df$High.Grad)
+
+#State hypothesis
+#as male decreases, there is a higher prob that a school is in the high graduate group
+hypo1=formula(High.Grad~ Male)
+
+#as male decreases and number of white students rise, there is a higher prob that a school is in the high graduate group
+hypo2=formula(High.Grad~ Male * White)
+
+#Compute regressions
+Logi1=glm(hypo1,data = df,
+          family = "binomial")
+Logi2=glm(hypo2,data = df,
+          family = "binomial")
+
+#see results
+summary(Logi1)
+
+summary(Logi2)
+
+#search for better fit model
+library(lmtest)
+lmtest::lrtest(Logi1,Logi2)
+#model for second hypothesis chosen
+
+#get marginal effect for each variable
+library(margins)
+(marginsINFO = margins(Logi2))
+
+#produce plot for both coefficients
+(marginsSUMM=summary(marginsINFO))
+
+library(ggplot2)
+base= ggplot(marginsSUMM,
+             aes(x=factor, y=AME))
+base= base + geom_point()
+
+plotMargins = base + theme(axis.text.x = element_text(angle = 80,size = 6,hjust = 1))
+plotMargins 
+
+plotMargins +  geom_errorbar(aes(ymin=lower,
+                                 ymax=upper))
+
+
+#plot variables separately
+cplot(Logi2, "Male")
+cplot(Logi2, "White")
+
+#interaction
+persp(Logi2)
+
+#Predicted probabilities
+#get predicted probability for school with average Male poplation and average white pop. to be a high grad school
+newdata <- with(df, data.frame(Male = mean(Male,na.rm=T), White=mean(White, na.rm=TRUE)))
+predict(Logi2, newdata, type="response")
+
+#get predicted probability for school with average Male poplation and diverse white pop. to be a high grad school
+
+quantile(df$White)
+
+newdata2 <- with(df, data.frame(Male= mean(Male,na.rm=T), White=0:556))
+preds<-predict(Logi2, newdata2, type="response", se.fit=T)
+
+predf <- preds$fit # predicted
+lower <- preds$fit - (1.96*preds$se.fit) # lower bounds
+upper <- preds$fit + (1.96*preds$se.fit) # upper bounds
+
+#plot
+plot(0:556, predf, type="l", ylab="Predicted Probability to be a High Graduate HS", xlab="White", bty="n")
+lines(0:556, lower, lty=2)
+lines(0:556, upper, lty=2)
+
+
+```
+
